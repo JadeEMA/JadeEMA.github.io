@@ -1,14 +1,14 @@
-
 <!doctype html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Jade: An Introduction</title>  
+  <title>Jade: An Introduction</title>
   <style>
     body {
       text-align: center;
       background: pink;
       color: white;
+      font-size: 20px;
     }
     p {
       font-size: 25px;
@@ -17,15 +17,45 @@
       border: 1px solid #ddd;
       border-radius: 47%;
     }
-    ul {
-      list-style-type: none;
-      margin: 0;
-      padding: 0;
-      
-      display: inline-block;
-      *display: inline;
-      zoom: 1
-    }
+    .dropbtn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 100px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: #3e8e41;
+}
   </style>
 </head>
 <body>
@@ -33,19 +63,13 @@
   <img src="https://avatars2.githubusercontent.com/u/32822208?s=400&v=4">
   <p style="color:#FF0000";>Goes to Bronx High School of Science<br>Class of 2021</p>
   <font face = "Palatino"><q>Yeah, I'm far, far from finishing</q></font>
-  <br>
-  <div>
-  <ul>
-    <li> About Me </li>
-  </ul>
-    <br>
-  <ul>
-  <li> Social Media </li>
-  </ul>
-    <br>
-  <ul>
-  <li> Other </li>
-  </ul>
-    <div>
+  <div class="dropdown" style="float:left;">
+  <button class="dropbtn">Menu</button>
+  <div class="dropdown-content" style="left:0;">
+    <a href="#">About Me</a>
+    <a href="#">Social Media</a>
+    <a href="#">Other</a>
+  </div>
+</div>
   </body>
 </html>
